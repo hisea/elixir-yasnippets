@@ -2,6 +2,6 @@
 # name: defmodule
 # key: defmodule
 # --
-defmodule $1 do
-	$0
+defmodule ${1:Module} do
+$0
 end

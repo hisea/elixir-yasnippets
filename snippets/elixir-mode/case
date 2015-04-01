@@ -2,6 +2,6 @@
 # name: case
 # key: case
 # --
-case $1 do
-  $0
+case ${1:true} do
+$0
 end

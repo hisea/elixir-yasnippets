@@ -2,6 +2,6 @@
 # name: defmacro
 # key: defmacro
 # --
-defmacro $1 do
-	$0
+defmacro ${1:Macro()} do
+$0
 end
