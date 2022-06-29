@@ -5,15 +5,16 @@
 defmodule ${1:Module}.Supervisor do
 use Supervisor
 
-def start_link do
-Supervisor.start_link(__MODULE__, :ok)
+def start_link(init_arg) do
+Supervisor.start_link(__MODULE__, init_arg, name: __MODULE__)
 end
 
 def init(:ok) do
 children = [
-$0
+ {$0, .. }
+
 ]
-supervise(children, strategy: :one_for_one)
+Supervise.init(children, strategy: :one_for_one)
 end
 
 end
